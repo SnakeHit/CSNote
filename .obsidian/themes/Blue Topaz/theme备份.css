@@ -10616,7 +10616,7 @@ body.text-indentation-two-em [data-type="markdown"] div[class="el-p"]:not(blockq
 .CodeMirror-code span.cm-formatting.cm-formatting-quote.cm-formatting-quote.cm-quote::before {
   content: "";
   border-left: 7px solid var(--theme-color);
-  border-radius: 0; /*5px 0 0 5px;*/
+  border-radius: 0; 
   height: 100%;
   margin-left: -7px;
   position: absolute;
@@ -11882,7 +11882,7 @@ body.fancy-hr-number .markdown-source-view.mod-cm6 .hr::after {
   border-color: var(--theme-color);
   background-color: var(--background-blockquote);
   border-radius: var(--radius-s);
-  /* margin-inline-start: 2.5%; */
+  /* margin-inline-start: 2.5%; */ /* modify */
   /* margin-inline-end: 2.5%; */
 }
 
@@ -13630,34 +13630,38 @@ body:not(.link-underline-internal) :is(.markdown-preview-view,.markdown-rendered
   background: var(--background-code);
 }
 
-.theme-dark :not(pre)>code[class*='language-'],
-.theme-dark pre[class*='language-'] {
+
+/* 代码框修改 */
+
+.theme-dark :not(pre)>code,
+.theme-dark pre{
   background: var(--background-code) ;
   border-radius: var(--radius-m);
 }
 
-.theme-light :not(pre)>code[class*='language-'],
-.theme-light pre[class*='language-'] {
+.theme-light :not(pre)>code,
+.theme-light pre{
   background: var(--background-code);
   border-radius: var(--radius-m);
 }
 
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"] {
+.theme-light code,
+.theme-light pre{
   text-shadow: none;
   color: var(--code-normal);
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
+  /* padding-right: 1.5em; */
 }
 
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"] {
+.theme-dark code,
+.theme-dark pre{
   color: var(--code-normal);
   text-shadow: none;
   letter-spacing: calc(var(--letter-space-code) * 0.02em);
 }
 body.codebox-frosted-glass .cm-s-obsidian div.HyperMD-codeblock-bg,
-body.codebox-frosted-glass :not(pre)>code[class*='language-'],
-body.codebox-frosted-glass pre[class*='language-'] {
+body.codebox-frosted-glass :not(pre)>code,
+body.codebox-frosted-glass pre{
   backdrop-filter: blur(calc(var(--blur-codebox-frosted-glass)*2px));
 }
 
@@ -13807,8 +13811,9 @@ body.adjustable-embed-content-height :is(.markdown-preview-view,.markdown-render
 }
 
 /* Source: https://github.com/AGMStudio/prism-theme-one-dark */
-body:not(.whole-code-wrap) code[class*='language-'],
-body:not(.whole-code-wrap) pre[class*='language-'] {
+/* 这里是代码框不换行 */
+body:not(.whole-code-wrap) code,
+body:not(.whole-code-wrap) pre{
   word-spacing: normal;
   word-break: normal;
   word-wrap: break-word;
@@ -13818,8 +13823,8 @@ body:not(.whole-code-wrap) pre[class*='language-'] {
   tab-size: 4 !important;
 }
 
-body.whole-code-wrap code[class*='language-'],
-body.whole-code-wrap pre[class*='language-'] {
+body.whole-code-wrap code,
+body.whole-code-wrap pre{
   word-spacing: normal;
   word-wrap: break-word;
   white-space: pre-wrap;
@@ -13831,6 +13836,25 @@ body.nowrap-edit-codebox .HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
   overflow: auto;
 }
 
+/* .theme-light code, .theme-light pre {
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  -moz-tab-size: 4 !important;
+  -o-tab-size: 4 !important;
+  tab-size: 4 !important;
+}
+
+.theme-dark code, .theme-dark pre {
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: break-word;
+  white-space: pre;
+  -moz-tab-size: 4 !important;
+  -o-tab-size: 4 !important;
+  tab-size: 4 !important;
+} */
 /* Inline code */
 :not(pre)>code[class*='language-'] {
   padding: .1em !important;
@@ -17693,7 +17717,7 @@ h5.breadcrumbs-matrix-header {
 }
 
 /* ================================== */
-/* ===== code  block enhancer ======= */
+/* ===== code block enhancer ======= */
 /* ================================== */
 .obsidian-banner-wrapper.code-block-wrap {
   position: unset;
