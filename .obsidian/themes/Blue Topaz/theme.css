@@ -28635,23 +28635,25 @@ body.background-settings-workplace-background-image.theme-dark.is-frameless:is(.
 
 /*********canvas****/
 
-.canvas-node-content img {
-  min-width: 100%;
-  position:absolute; 
-  left: 0;
-  top: 0;
-  right:0;
-  bottom: 0;
-}
+/* .canvas-node-content img { */
+/*   min-width: 100%; */
+/*   position:absolute; */ 
+/*   left: 0; */
+/*   top: 0; */
+/*   right:0; */
+/*   bottom: 0; */
+/* } */
 
-.canvas-node-container
-{
-  border:unset;
-  box-shadow: var(--shadow-s);
-}
+/* .canvas-node-container */
+/* { */
+/*   border:unset; */
+/*   box-shadow: var(--shadow-s); */
+/* } */
+
 .canvas-node-container .markdown-embed{
   background-color: transparent;
 }
-.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view {
-  padding: 0  0.5em;
-}
+
+/* .canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view { */
+/*   padding: 0  0.5em; */
+/* } */
